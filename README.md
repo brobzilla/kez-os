@@ -13,33 +13,22 @@ We'll try to treat this similarly to a college course taught by a rather forgivi
 # dates
 On each date below we'll make it a goal for ourselves to have read the chapter and collaborated on implementing the chapter's respective feature(s).
 
-1/26 - Chapter 1
-
-2/2  - Chapter 2
-
-2/9  - Chapter 3
-
-2/16 - Chapter 4
-
-2/23 - Chapter 5
-
-3/2  - Chapter 6
-
-3/9  - Chapter 7
-
-3/16 - Chapter 8
-
-3/23 - Chapter 9
-
-3/30 - Chapter 10
-
-4/6  - Chapter 11
-
-4/13 - Chapter 12
-
-4/20 - Chapter 13
-
-4/27 - Chapter 14
+| Date          | Chapter       | Contents                               |
+| :------------ |:--------------|:---------------------------------------|
+| 1/26          | Chapter 1     | Introduction                           |
+| 2/2           | Chapter 2     | First Steps                            |
+| 2/9           | Chapter 3     | Getting to C                           |
+| 2/16          | Chapter 4     | Output                                 |
+| 2/23          | Chapter 5     | Segmentation                           |
+| 3/2           | Chapter 6     | Interrupts and Input                   |
+| 3/9           | Chapter 7     | The Road to User Mode                  |
+| 3/16          | Chapter 8     | A Short Introduction to Virtual Memory |
+| 3/23          | Chapter 9     | Paging                                 |
+| 3/30          | Chapter 10    | Page Frame Allocation                  |
+| 4/6           | Chapter 11    | User Mode                              |
+| 4/13          | Chapter 12    | File Systems                           |
+| 4/20          | Chapter 13    | System Calls                           |
+| 4/27          | Chapter 14    | Multitasking                           |
 
 # notes
 Let's be verbose with our comments to keep eachother in the loop. Excessive condensation is a false economy!
