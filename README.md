@@ -5,8 +5,8 @@ Buddies learning os dev.
 This document is always open for review and completely tenative. Any statements made here are open for review/discussion/modification. Original commits are primarily for conversation-sparking purposes.
 
 # sources
-http://littleosbook.github.io/
-http://pages.cs.wisc.edu/~remzi/OSTEP/
+- http://littleosbook.github.io/
+- http://pages.cs.wisc.edu/~remzi/OSTEP/
 
 # goals
 We'll try to treat this similarly to a college course taught by a rather forgiving professor. Since we're following littleosbook, we'll set a rate of one chapter per week, which will allow us to complete the "course" in 14 weeks. We should feel free to make as many changes as we want to the OS to improve its design or play around with it. We can branch often for experimentation.
