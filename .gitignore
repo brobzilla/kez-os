@@ -3,3 +3,5 @@ kernel.elf
 os.iso
 loader.o
 iso/boot/kernel.elf
+kmain.o
+
