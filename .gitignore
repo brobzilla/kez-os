@@ -1,5 +1,6 @@
 bochslog.txt
 kernel.elf
 os.iso
-loader.o
+*.o
 iso/boot/kernel.elf
+

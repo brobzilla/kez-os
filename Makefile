@@ -1,29 +1,38 @@
-.PHONY: all
-all: os.iso
+OBJECTS = loader.o kmain.o io.o framebuffer_driver.o
+CC = gcc
+CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
+		 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c -std=c11
+LDFLAGS = -T link.ld -melf_i386
+AS = nasm
+ASFLAGS = -f elf
 
-loader.o: loader.s
-	nasm -f elf32 loader.s
+all: kernel.elf
 
-os.iso: iso/boot/grub/stage2_eltorito iso/boot/grub/menu.lst iso/boot/kernel.elf
-	genisoimage -R                  \
-	-b boot/grub/stage2_eltorito    \
-	-no-emul-boot                   \
-	-boot-load-size 4               \
-	-A os                           \
-	-input-charset utf8             \
-	-quiet                          \
-	-boot-info-table                \
-	-o os.iso                       \
-	iso
+kernel.elf: $(OBJECTS)
+	ld $(LDFLAGS) $(OBJECTS) -o kernel.elf
 
-iso/boot/kernel.elf: loader.o link.ld
-	ld -T link.ld -melf_i386 loader.o -o iso/boot/kernel.elf
+os.iso: kernel.elf
+	cp kernel.elf iso/boot/kernel.elf
+	genisoimage -R                              \
+				-b boot/grub/stage2_eltorito    \
+				-no-emul-boot                   \
+				-boot-load-size 4               \
+				-A os                           \
+				-input-charset utf8             \
+				-quiet                          \
+				-boot-info-table                \
+				-o os.iso                       \
+				iso
 
-run: bochsrc.txt os.iso
+run: os.iso
 	bochs -f bochsrc.txt -q
 
+%.o: %.c
+	$(CC) $(CFLAGS)  $< -o $@
+
+%.o: %.s
+	$(AS) $(ASFLAGS) $< -o $@
+
 clean:
-	rm -rf kernel.elf
-	rm -rf os.iso
-	rm -rf loader.o
-	rm -rf iso/boot/kernel.elf
+	rm -rf *.o kernel.elf os.iso
+
