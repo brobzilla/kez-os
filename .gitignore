@@ -3,4 +3,5 @@ kernel.elf
 os.iso
 *.o
 iso/boot/kernel.elf
+com1.out
 

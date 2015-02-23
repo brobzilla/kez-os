@@ -63,7 +63,7 @@ void clear_screen()
  *  @param buf The char buffer
  *  @param len How long the buffer is
  **/
-void write(char *buf, unsigned int len)
+void fb_write(char *buf, unsigned int len)
 {
     for (unsigned int i = 0; i < len; i++)
     {
