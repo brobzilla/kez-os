@@ -14,6 +14,6 @@ void clear_screen();
  *  @param buf The char buffer
  *  @param len How long the buffer is
  **/
-void write(char *buf, unsigned int len);
+void fb_write(char *buf, unsigned int len);
 
-#endif /* INCLUDE_IO_H */
+#endif /* INCLUDE_FRAMEBUFFER_DRIVER_H */
